@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>| 参加方法</title>
+    <meta name="description" content="Hello">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 　rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/management-guide">運営</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="home-content wrapper">
+            <div class="page-title">参加方法についての詳細</div>
+            <div class="sub-title">参加方法についての紹介をものすごく細かく紹介します</div><br>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">まずはマイクラを起動してください、これはわかりますよね</h1>
+            <img src="/images/start-guide/minecraft-launcher.png" alt="画像を表示できませんでした" style="filter:drop-shadow(5px 5px 5px #0000008d); width: 512px;"><br>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">次にホーム画面の、[マルチプレイ]をクリックしましょう</h1>
+            <img src="/images/start-guide/minecraft-home.png" alt="画像を表示できませんでした" style="filter:drop-shadow(5px 5px 5px #0000008d); width: 512px;"><br>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">こんな警告が出るかもしれませんが大丈夫です、多くの場合はね</h1>
+            <img src="/images/start-guide/minecraft-multiplay-warn.png" alt="画像を表示できませんでした" style="filter:drop-shadow(5px 5px 5px #0000008d); width: 512px;"><br>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">そしたら、[サーバーを追加]を押してください</h1>
+            <img src="/images/start-guide/minecraft-multiplay-addserver.png" alt="画像を表示できませんでした" style="filter:drop-shadow(5px 5px 5px #0000008d); width: 512px;"><br>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">ではサーバーのアドレスをそこに書き込んで、完了を押しましょう</h1>
+            <img src="/images/start-guide/minecraft-multiplay-addserver-ip.png" alt="画像を表示できませんでした" style="filter:drop-shadow(5px 5px 5px #0000008d); width: 512px;"><br>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">いよいよです！いつもワールドを開くように<br>サーバーに接続しましょう！！！</h1>
+            <img src="/images/start-guide/minecraft-multiplay-joinserver.png" alt="画像を表示できませんでした" style="filter:drop-shadow(5px 5px 5px #0000008d); width: 512px;"><br>
+            <div>-</div>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">それでも参加できない場合は、<br>下記のリンクで状況を説明しましょう</h1>
+            <a href="https://discord.com/channels/842320961033601044/968529044121464843" class="link-title">ヘルプ - Discord</a>
+        </div>
+    </div>
+    <!--マウスストーカー-->
+    <div id="stalker">
+        <div class="spinner"></div>
+    </div>
+    <script type="text/javascript">
+        const stalker = document.getElementById('stalker');
+        document.addEventListener('mousemove', function(e) {
+            stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>| Extend MC データパック</title>
+    <meta name="description" content="Hello">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 　rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/management-guide">運営</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="home-content wrapper">
+            <div class="page-title">追加要素について</div>
+            <div class="sub-title">サーバー独自に開発したデータパックで追加される要素について</div>
+            <h1 style="color:white;font-family: 'Philosopher', serif;">次の方法で"羽付き作業台"を作成します</h1>
+            <img src="/images/feather-crafter.png" alt="画像を表示できませんでした" style="border-radius:5%; filter:drop-shadow(5px 5px 5px #0000008d)"><br>
+            <ion-icon name="arrow-down-outline" style="font-size:3rem; color:#fff"></ion-icon><br>
+            <h1 style="color: #fff;">右クリック</h1><br>
+            <img src="/images/feather-crafter-clicked.png" alt="画像を表示できませんでした" style="border-radius:5%; filter:drop-shadow(5px 5px 5px #0000008d)"><br>
+            <br>
+            <h1 style="color:white">中にアイテムを並べて、羽を右クリックすればクラフトできます</h1>
+            <div>-</div>
+            <a href="recipes/" class="link-title">レシピについて</a>
+            <div>-</div>
+            <a href="/user-guide/server-resourcepack/" class="link-title">専用リソースパック</a>
+            <div>-</div>
+
+        </div>
+    </div>
+    <!--マウスストーカー-->
+    <div id="stalker">
+        <div class="spinner"></div>
+    </div>
+    <script type="text/javascript ">
+        const stalker = document.getElementById('stalker');
+        document.addEventListener('mousemove', function(e) {
+            stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+    </script>
+    <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+</body>
+
+</html>

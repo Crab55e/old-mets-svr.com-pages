@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>| ロール : 魔法少女</title>
+    <meta name="description" content="Hello">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/management-guide/">運営</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="home-content wrapper">
+            <div class="page-title">魔法少女ロールについて</div>
+            <div class="sub-title"> </div>
+            <div style="color: rgb(255, 109, 209);font-size: 50px; filter: drop-shadow(3px 3px #00000088);">魔法少女</div>
+            <h2>保持している権限</h2>
+            <div>
+                <div>
+                    <li>基本的な権限(メッセージ、VCなど)</li>
+                    <li>絵文字、スタンプの管理</li>
+                    <li>優先スピーカー</li>
+                    <div style="padding-bottom: 40px;"></div>
+                </div>
+            </div>
+            <h2>主な仕事</h2>
+            <div>
+                <div>
+                    <li>サーバーのだいたいすべて</li>
+                    <div style="padding-bottom: 40px;"></div>
+                </div>
+            </div>
+            <h2>付与の条件</h2>
+            <div>
+                <div>
+                    <li>「契約」</li>
+                    <div style="padding-bottom: 40px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================================マウスストーカー========================================-->
+    <div id="stalker">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const stalker = document.getElementById('stalker');
+        document.addEventListener('mousemove', function(e) {
+            stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+    </script>
+</body>
+
+</html>

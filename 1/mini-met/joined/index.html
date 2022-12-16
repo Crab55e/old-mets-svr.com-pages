@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini-met</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    body {
+        overflow: hidden;
+    }
+    
+    a {
+        color: #0000ff;
+        text-decoration: none;
+        transition: .2s;
+    }
+    
+    a:hover {
+        color: #8888ff;
+    }
+    
+    div.emoji.fall {
+        animation: fall 2s ease-in;
+        visibility: hidden;
+    }
+    
+    @keyframes fall {
+        0% {
+            transform: translate(0%, 0%);
+            visibility: visible;
+        }
+        100% {
+            transform: translate(0%, 175%);
+            visibility: visible;
+        }
+    }
+    
+    div.emoji {
+        filter: drop-shadow(5px 5px 2px #0004);
+        font-size: 20rem;
+        user-select: none;
+        animation: rumble 0.1s ease-in-out infinite;
+        cursor: pointer;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+    
+    .error-description {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    @keyframes rumble {
+        0% {
+            transform: translate(0) rotate(1deg);
+        }
+        25% {
+            transform: translate(2px);
+        }
+        50% {
+            transform: translate(0) rotate(-1deg);
+        }
+        75% {
+            transform: translate(-2px);
+        }
+        100% {
+            transform: translate(0) rotate(1deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="emoji" id="emoji">🥳</div>
+    <div class="title" id="title">子metを導入しました</div>
+    <div class="error-description" id="description"></div>
+    <div id="hint"></div>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script>
+        var currentURL = new URL(location.href);
+        var currentParams = new URLSearchParams(currentURL.search);
+        if (currentParams.get("error")) {
+            var emojiElem = document.getElementById("emoji");
+            var titleElem = document.getElementById("title");
+            var descriptionElem = document.getElementById("description");
+            var hintElem = document.getElementById("hint");
+            titleElem.innerText = currentParams.get("error");
+            descriptionElem.innerText = currentParams.get("error_description")
+            emojiElem.innerText = "😥";
+            hintElem.innerHTML = "<div><span><a href=\" //twitter.com/Crab55e\">かにさん</a>に相談に乗ってもらいましょう</span></div>";
+            emojiElem.addEventListener("click", function(e) {
+                this.classList.add("fall")
+            })
+        } else {
+
+            party.confetti(document.querySelector(".emoji"), {
+                count: party.variation.range(20, 50),
+                size: party.variation.range(1, 5),
+                speed: party.variation.range(800, 1000)
+            });
+            document.querySelector(".emoji").addEventListener("click", function(e) {
+                party.confetti(this);
+            });
+        }
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>
